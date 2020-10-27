@@ -285,7 +285,7 @@ namespace SubWall
             {
                 switch (def.ToString())
                 {
-					case "OpenGate":
+					case "ClosedGate":
 						yield return new FloatMenuOption("Open".Translate(this, LabelShort), delegate
 						{
 							Job job = JobMaker.MakeJob(SubWall_JobDefOf.RetDef_CloseGate, this);
@@ -293,7 +293,7 @@ namespace SubWall
 						});
 						break;
 
-					case "ClosedGate":
+					case "OpenGate":
 						yield return new FloatMenuOption("OrderCloseThing".Translate(LabelShort, this), delegate
 						{
 							Job job = JobMaker.MakeJob(SubWall_JobDefOf.RetDef_OpenGate, this);
@@ -301,7 +301,7 @@ namespace SubWall
 						});
 						break;
 
-					case "OpenPortcullis":
+					case "ClosedPortcullis":
 						yield return new FloatMenuOption("OrderRaiseThing".Translate(LabelShort, this), delegate
 						{
 							Job job = JobMaker.MakeJob(SubWall_JobDefOf.RetDef_ClosePort, this);
@@ -309,7 +309,7 @@ namespace SubWall
 						});
 						break;
 
-					case "ClosedPortcullis":
+					case "OpenPortcullis":
 						yield return new FloatMenuOption("OrderLowerThing".Translate(LabelShort, this), delegate
 						{
 							Job job = JobMaker.MakeJob(SubWall_JobDefOf.RetDef_OpenPort, this);
